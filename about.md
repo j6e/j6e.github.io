@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 published: true
 ---
@@ -15,3 +15,7 @@ Python (3+)
 
 ### Other Interests
 Math & Physics. On my spare time I also like to lose Magic: The Gathering qualifier/regional finals :/
+
+### Favourite quote?
+> Sapere Aude!
+
