@@ -2,14 +2,17 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+I'm a 4th year CS student in Polytechnic University of Valencia (Spain). 
 
-### More Information
+### What do I love in CS? 
+I'm a big fan of Machine Learning and Data Visualization. Also I enjoy learning new algorithms and weird data structures. The inconfessable? I actually like functional programming...
 
-A place to include any other types of information that you'd like to include about yourself.
+### Favourite language?
+Python (3+)
 
-### Contact me
+### Other Interests
+Math & Physics. On my spare time I also like to lose Magic: The Gathering qualifier/regional finals :/ 
 
-[email@domain.com](mailto:email@domain.com)
