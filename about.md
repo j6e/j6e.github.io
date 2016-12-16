@@ -17,5 +17,5 @@ Python (3+)
 Math & Physics. On my spare time I also enjoy losing Magic: The Gathering qualifier/regional finals :/
 
 ### Favourite quote?
-> Sapere Aude!
+>Sapere Aude!
 
