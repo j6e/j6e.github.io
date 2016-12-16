@@ -14,7 +14,7 @@ I'm a big fan of Machine Learning and Data Visualization. I also enjoy learning 
 Python (3+)
 
 ### Other Interests
-Math & Physics. On my spare time I also enjoy losing Magic: The Gathering qualifier/regional finals :/
+Math & Physics. On my spare time I also don't mind losing some Magic: The Gathering qualifier/regional finals here and there :/
 
 ### Favourite quote?
 >Sapere Aude!
