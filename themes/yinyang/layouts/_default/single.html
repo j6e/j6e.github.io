@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+  <article class="post {{ .Site.Language.LanguageName }}" id="article">
+    <div class="row center-xs" style="text-align: justify;">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-7">
+        <div class="header">
+          {{ partial "header.html" . }}
+        </div>
+
+        <header class="post-header">
+          <h1 class="post-title">{{ .Title }}</h1>
+          {{ if in site.Params.mainSections .Type }}
+          <div class="row post-desc">
+            <div class="col-xs-12 post-desc-items">
+              {{ if .Date }}
+              <time class="post-date" datetime="{{ .Date.Format " 2006-01-02 15:04:05 MST" }}">
+                {{ .Date.Format "2006-01-02" }}
+              </time>
+              {{ end }}
+              {{ if isset .Params "tags" }}
+              {{ range $tag := .Params.tags }}
+              <span class="posts-line-tag">{{ $tag }}</span>
+              {{ end }}
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </header>
+
+        <div class="post-content markdown-body">
+          {{ if .Params.toc }}
+          <h2 id="toc">Table of contents</h2>
+          {{ .TableOfContents }}
+          {{ end }}
+          {{ .Content }}
+        </div>
+
+        <!-- We only want to activate the comments section in production -->
+        {{ if not (eq hugo.Environment "development") }}
+        {{ if in site.Params.mainSections .Type }}
+        <script type="text/javascript">
+          var s = document.createElement('script');
+          s.setAttribute('src', 'https://utteranc.es/client.js');
+          s.setAttribute('repo', 'j6e/j6e.github.io');
+          s.setAttribute('issue-term', 'pathname');
+          s.setAttribute('crossorigin', 'anonymous');
+          s.setAttribute('async', null);
+          s.setAttribute('theme', 'github-light');
+          document.body.appendChild(s);
+        </script>
+        {{ end }}
+        {{ end }}
+
+        {{ if in site.Params.mainSections .Type }}
+        {{ partial "related.html" . }}
+        {{ end }}
+
+        {{ if not (in site.Params.mainSections .Type) }}
+        {{ partial "footer.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </article>
+
+  {{ partial "scripts.html" . }}
+  {{ if .Site.Params.extraBody }}
+  {{ .Site.Params.extraBody | safeHTML }}
+  {{ end }}
+
+
+</body>
+
+</html>
